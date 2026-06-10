@@ -12,6 +12,7 @@ public:
     uint8_t shift = KEYBOARD_MODIFIER_LEFTSHIFT;
     uint8_t ctrl = KEYBOARD_MODIFIER_LEFTCTRL;
     uint8_t alt = KEYBOARD_MODIFIER_LEFTALT;
+    uint8_t keyGuide{0};
     
     void setup();
     void send(uint8_t keys[6], uint8_t modifier = 0);
@@ -21,4 +22,6 @@ public:
     
     void copy();
     void paste();
+    void typeLetter(uint8_t alpha);
+    void addOrSub(uint8_t* val);
 };
